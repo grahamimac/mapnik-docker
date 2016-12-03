@@ -66,6 +66,3 @@ RUN cd ../ && \
 	wget https://pypi.python.org/packages/7b/96/12930cefa3048a79ea74c24fdf32def0820335da23a8c4d00ccc5d41e21b/mapnik-0.1-py2.7-linux-x86_64.egg && \
 	easy_install mapnik-0.1-py2.7-linux-x86_64.egg && \
 	rm mapnik-0.1-py2.7-linux-x86_64.egg
-
-
-
