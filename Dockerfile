@@ -57,8 +57,7 @@ RUN apt-get update -y && \
 	git clone https://github.com/mapnik/mapnik mapnik-3.x --depth 10 && \
 	cd mapnik-3.x && \
 	git submodule update --init && \
-	ls && \
-	. bootstrap.sh && \
+	./bootstrap.sh && \
 	./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0" && \
 	make && \
 	make install && \
