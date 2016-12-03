@@ -7,5 +7,5 @@ Installing [Mapnik](http://mapnik.org/) is hard. Use this Dockerfile to automate
 To run the server with Mapnik installed and ready to go, run the following:
 
 ```bash
-docker run -itd graham3333/mapnik-python:1.0
+docker run -itd graham3333/mapnik-python
 ```
