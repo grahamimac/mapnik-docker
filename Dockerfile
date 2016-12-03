@@ -53,17 +53,14 @@ RUN apt-get update -y && \
 		libharfbuzz-gobject0 \
 		libharfbuzz-icu0 \
 		libharfbuzz0b \
-		python-setuptools
-
-RUN git clone https://github.com/mapnik/mapnik mapnik-3.x --depth 10
-RUN cd mapnik-3.x
-RUN git submodule update --init
-RUN source bootstrap.sh
-RUN ./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0"
-RUN make
-RUN make install
-
-RUN cd ../
-RUN wget https://pypi.python.org/packages/7b/96/12930cefa3048a79ea74c24fdf32def0820335da23a8c4d00ccc5d41e21b/mapnik-0.1-py2.7-linux-x86_64.egg
-RUN easy_install mapnik-0.1-py2.7-linux-x86_64.egg
-RUN rm mapnik-0.1-py2.7-linux-x86_64.egg
+		python-setuptools && \
+	git clone https://github.com/mapnik/mapnik mapnik-3.x --depth 10 && \
+	cd mapnik-3.x && \
+	git submodule update --init && \
+	source bootstrap.sh && \
+	./configure CUSTOM_CXXFLAGS="-D_GLIBCXX_USE_CXX11_ABI=0" && \
+	make && \
+	make install && \
+	wget https://pypi.python.org/packages/7b/96/12930cefa3048a79ea74c24fdf32def0820335da23a8c4d00ccc5d41e21b/mapnik-0.1-py2.7-linux-x86_64.egg && \
+	easy_install mapnik-0.1-py2.7-linux-x86_64.egg && \
+	rm mapnik-0.1-py2.7-linux-x86_64.egg
