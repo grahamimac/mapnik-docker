@@ -53,6 +53,7 @@ RUN apt-get update -y && \
 		libharfbuzz-gobject0 \
 		libharfbuzz-icu0 \
 		libharfbuzz0b \
+		awscli \
 		s3cmd \
 		python-setuptools \
 		python-pandas \
