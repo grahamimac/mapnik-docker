@@ -53,10 +53,11 @@ RUN apt-get update -y && \
 		libharfbuzz-gobject0 \
 		libharfbuzz-icu0 \
 		libharfbuzz0b \
+		s3cmd \
 		python-setuptools \
 		python-pandas \
 		python-pip \
-		python-requests && \
+		python-requests \&& \
 	git clone https://github.com/mapnik/mapnik mapnik-3.x --depth 10 && \
 	cd mapnik-3.x && \
 	git submodule update --init && \
